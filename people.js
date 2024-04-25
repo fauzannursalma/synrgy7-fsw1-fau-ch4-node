@@ -104,7 +104,10 @@ const readDetailData = (id) => {
   fs.readFile("./people.txt", "utf-8", (err, data) => {
     if (err) console.log("error reading data!");
     const parsed = JSON.parse(data);
+    // built-in find
     const detailData = parsed.find((item) => item.id === id);
+    // alternative filter
+    // const detailData = parsed.filter((item) => item.id === id)[0];
     console.log("===== Detail Data By Id =====");
     console.log(detailData);
   });
