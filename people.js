@@ -66,6 +66,7 @@ const people = [
 const writeData = (data) => {
   fs.writeFile("./people.txt", JSON.stringify(data), "utf-8", (err) => {
     if (err) console.log("error saving data!");
+    console.log("Data has been saved!");
   });
 };
 
@@ -73,6 +74,8 @@ const readData = () => {
   fs.readFile("./people.txt", "utf-8", (err, data) => {
     if (err) console.log("error reading data!");
     const parsed = JSON.parse(data);
+    console.log("Data has been read!");
+    console.log("===== People Data =====");
     console.log(parsed);
   });
 };
