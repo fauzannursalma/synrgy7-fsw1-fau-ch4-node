@@ -1,0 +1,6 @@
+Volume Kubus: 64
+Luas Permukaan Kubus: 96
+Volume Balok: 120   
+Luas Permukaan Balok: 148
+Volume Prisma Segitiga: 60
+Luas Permukaan Prisma Segitiga: 128

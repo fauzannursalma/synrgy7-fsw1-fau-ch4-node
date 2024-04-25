@@ -1,13 +1,13 @@
 // Module rumus kubus (volume dan luas permukaan)
 // ==================================================
 // rumus volume kubus = s × s × s
-const volumeKubus = (sisi) => {
+const rumusVolumeKubus = (sisi) => {
   return sisi * sisi * sisi;
 };
 // rumus luas permukaan kubus
-const luasPermukaanKubus = (sisi) => {
+const rumusLuasPermukaanKubus = (sisi) => {
   return 6 * sisi * sisi;
 };
 
 // export module
-module.exports = { volumeKubus, luasPermukaanKubus };
+module.exports = { rumusVolumeKubus, rumusLuasPermukaanKubus };
