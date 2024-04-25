@@ -1,7 +1,8 @@
 // ==================================================
 // People Data
 // ==================================================
-const { people, writeData, readData } = require("./people.js");
+const { people, writeData, readData, readDetailData } = require("./people.js");
 
 writeData(people);
 readData();
+readDetailData(2);

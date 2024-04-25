@@ -70,13 +70,43 @@ const writeData = (data) => {
   });
 };
 
+// Read All Data (array of objects)
+// ==================================================
+// const readData = () => {
+//   fs.readFile("./people.txt", "utf-8", (err, data) => {
+//     if (err) console.log("error reading data!");
+//     const parsed = JSON.parse(data);
+//     console.log("Data has been read!");
+//     console.log("===== People Data =====");
+//     console.log(parsed);
+//   });
+// };
+
+// Read All Name (array of strings)
+// ==================================================
 const readData = () => {
   fs.readFile("./people.txt", "utf-8", (err, data) => {
     if (err) console.log("error reading data!");
     const parsed = JSON.parse(data);
-    console.log("Data has been read!");
-    console.log("===== People Data =====");
-    console.log(parsed);
+    console.log("===== People Data (All Names) =====");
+    // built-in map
+    const names = parsed.map((item) => item.name);
+    // alternative forEach
+    // const names = [];
+    // parsed.forEach((item) => {
+    //   names.push(item.name);
+    // });
+    console.log(names);
+  });
+};
+
+const readDetailData = (id) => {
+  fs.readFile("./people.txt", "utf-8", (err, data) => {
+    if (err) console.log("error reading data!");
+    const parsed = JSON.parse(data);
+    const detailData = parsed.find((item) => item.id === id);
+    console.log("===== Detail Data By Id =====");
+    console.log(detailData);
   });
 };
 
@@ -84,4 +114,5 @@ module.exports = {
   people,
   writeData,
   readData,
+  readDetailData,
 };
